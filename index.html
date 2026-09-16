@@ -472,12 +472,12 @@
       <div id="cartItems" class="space-y-4"><!-- Cart items will be loaded here -->
       </div>
       <div class="product-card rounded-2xl p-6">
-       <div class="flex justify-between items-center text-lg mb-4"><span class="text-gray-400">Subtotal:</span> <span id="cartSubtotal" class="text-white font-bold">0.00 DH</span>
+       <div class="flex justify-between items-center text-lg mb-4"><span class="text-gray-400">Subtotal:</span> <span id="cartSubtotal" class="text-white font-bold">0.00 MAD</span>
        </div>
-       <div class="flex justify-between items-center text-lg mb-4"><span class="text-gray-400">Discount:</span> <span id="cartDiscount" class="text-green-400 font-bold">-0.00 DH</span>
+       <div class="flex justify-between items-center text-lg mb-4"><span class="text-gray-400">Discount:</span> <span id="cartDiscount" class="text-green-400 font-bold">-0.00 MAD</span>
        </div>
        <div class="border-t border-gray-700 pt-4">
-        <div class="flex justify-between items-center text-2xl"><span class="text-white font-bold">Total:</span> <span id="cartTotal" class="text-orange-500 font-display font-bold">0.00 DH</span>
+        <div class="flex justify-between items-center text-2xl"><span class="text-white font-bold">Total:</span> <span id="cartTotal" class="text-orange-500 font-display font-bold">0.00 MAD</span>
         </div>
        </div><button onclick="navigateTo('checkout')" class="btn-primary w-full py-4 rounded-xl font-bold text-lg mt-6"> Proceed to Checkout → </button>
       </div>
@@ -515,7 +515,7 @@
         <div id="checkoutSummary" class="space-y-2 text-gray-300 mb-4"><!-- Summary items -->
         </div>
         <div class="border-t border-gray-700 pt-4">
-         <div class="flex justify-between items-center text-xl"><span class="text-white font-bold">Total:</span> <span id="checkoutTotal" class="text-orange-500 font-display font-bold">0.00 DH</span>
+         <div class="flex justify-between items-center text-xl"><span class="text-white font-bold">Total:</span> <span id="checkoutTotal" class="text-orange-500 font-display font-bold">0.00 MAD</span>
          </div>
         </div><button onclick="placeOrder()" id="placeOrderBtn" class="btn-primary w-full py-4 rounded-xl font-bold text-lg mt-6"> Place Order → </button>
        </div>
@@ -595,7 +595,7 @@
         </div>
         <div class="stat-card rounded-xl p-6">
          <p class="text-gray-400 text-sm mb-1">Total Revenue</p>
-         <p id="statRevenue" class="text-3xl font-display font-bold text-orange-500">0 DH</p>
+         <p id="statRevenue" class="text-3xl font-display font-bold text-orange-500">0 MAD</p>
         </div>
         <div class="stat-card rounded-xl p-6">
          <p class="text-gray-400 text-sm mb-1">Pending Orders</p>
@@ -679,7 +679,7 @@
         </div>
        </div>
        <div class="grid md:grid-cols-2 gap-4">
-        <div><label for="productPrice" class="block text-gray-300 mb-2 font-semibold">Price (DH)</label> <input type="number" id="productPrice" min="0" step="0.01" class="input-field w-full px-4 py-3 rounded-xl text-white" placeholder="0.00" required>
+        <div><label for="productPrice" class="block text-gray-300 mb-2 font-semibold">Price (MAD)</label> <input type="number" id="productPrice" min="0" step="0.01" class="input-field w-full px-4 py-3 rounded-xl text-white" placeholder="0.00" required>
         </div>
         <div><label for="productStock" class="block text-gray-300 mb-2 font-semibold">Stock Quantity</label> <input type="number" id="productStock" min="0" class="input-field w-full px-4 py-3 rounded-xl text-white" placeholder="0" required>
         </div>
@@ -975,10 +975,10 @@
               <div class="flex items-center justify-between">
                 <div>
                   ${product.discount > 0 ? `
-                    <span class="text-gray-500 line-through text-sm">${product.price.toFixed(2)} DH</span>
-                    <span class="text-orange-500 font-display font-bold text-xl ml-2">${finalPrice.toFixed(2)} DH</span>
+                    <span class="text-gray-500 line-through text-sm">${product.price.toFixed(2)} MAD</span>
+                    <span class="text-orange-500 font-display font-bold text-xl ml-2">${finalPrice.toFixed(2)} MAD</span>
                   ` : `
-                    <span class="text-orange-500 font-display font-bold text-xl">${product.price.toFixed(2)} DH</span>
+                    <span class="text-orange-500 font-display font-bold text-xl">${product.price.toFixed(2)} MAD</span>
                   `}
                 </div>
                 <button onclick="addToCart('${product.__backendId}')" class="btn-primary p-3 rounded-xl">
@@ -1130,7 +1130,7 @@
             </div>
             <div class="flex-1">
               <h3 class="font-semibold text-white">${product.name}</h3>
-              <p class="text-orange-500 font-bold">${finalPrice.toFixed(2)} DH</p>
+              <p class="text-orange-500 font-bold">${finalPrice.toFixed(2)} MAD</p>
             </div>
             <div class="flex items-center gap-3">
               <button onclick="updateCartQuantity('${item.productId}', -1)" class="w-8 h-8 bg-surface rounded-lg flex items-center justify-center text-gray-300 hover:bg-orange-500/20">-</button>
@@ -1147,9 +1147,9 @@
       }).join('');
       
       const { subtotal, discount, total } = getCartTotal();
-      document.getElementById('cartSubtotal').textContent = `${subtotal.toFixed(2)} DH`;
-      document.getElementById('cartDiscount').textContent = `-${discount.toFixed(2)} DH`;
-      document.getElementById('cartTotal').textContent = `${total.toFixed(2)} DH`;
+      document.getElementById('cartSubtotal').textContent = `${subtotal.toFixed(2)} MAD`;
+      document.getElementById('cartDiscount').textContent = `-${discount.toFixed(2)} MAD`;
+      document.getElementById('cartTotal').textContent = `${total.toFixed(2)} MAD`;
     }
     
     function updateCheckoutPage() {
@@ -1164,13 +1164,13 @@
         return `
           <div class="flex justify-between">
             <span>${product.name} x${item.quantity}</span>
-            <span>${(finalPrice * item.quantity).toFixed(2)} DH</span>
+            <span>${(finalPrice * item.quantity).toFixed(2)} MAD</span>
           </div>
         `;
       }).join('');
       
       const { total } = getCartTotal();
-      document.getElementById('checkoutTotal').textContent = `${total.toFixed(2)} DH`;
+      document.getElementById('checkoutTotal').textContent = `${total.toFixed(2)} MAD`;
     }
     
     // =====================
@@ -1354,7 +1354,7 @@
       document.getElementById('statOrders').textContent = orders.length;
       
       const revenue = orders.reduce((sum, o) => sum + (o.total || 0), 0);
-      document.getElementById('statRevenue').textContent = `${revenue.toFixed(2)} DH`;
+      document.getElementById('statRevenue').textContent = `${revenue.toFixed(2)} MAD`;
       
       const pending = orders.filter(o => o.status === 'pending').length;
       document.getElementById('statPending').textContent = pending;
@@ -1381,7 +1381,7 @@
             </div>
           </td>
           <td class="px-6 py-4 text-gray-400">${product.category}</td>
-          <td class="px-6 py-4 text-orange-500 font-bold">${product.price.toFixed(2)} DH</td>
+          <td class="px-6 py-4 text-orange-500 font-bold">${product.price.toFixed(2)} MAD</td>
           <td class="px-6 py-4 text-gray-400">${product.stock}</td>
           <td class="px-6 py-4">
             <div class="flex gap-2">
@@ -1452,11 +1452,11 @@
             <div class="border-t border-gray-700 pt-4">
               <p class="text-gray-400 text-sm mb-2">Items</p>
               <div class="space-y-1">
-                ${items.map(item => `<p class="text-white">${item.name} x${item.quantity} - ${(item.price * item.quantity).toFixed(2)} DH</p>`).join('')}
+                ${items.map(item => `<p class="text-white">${item.name} x${item.quantity} - ${(item.price * item.quantity).toFixed(2)} MAD</p>`).join('')}
               </div>
               <div class="mt-4 flex justify-between items-center">
                 <span class="text-gray-400">Total:</span>
-                <span class="text-orange-500 font-display font-bold text-xl">${order.total.toFixed(2)} DH</span>
+                <span class="text-orange-500 font-display font-bold text-xl">${order.total.toFixed(2)} MAD</span>
               </div>
             </div>
           </div>
@@ -1469,7 +1469,7 @@
             <p class="text-white font-semibold">${order.customerName}</p>
             <p class="text-gray-400 text-sm">${new Date(order.createdAt).toLocaleDateString()}</p>
           </div>
-          <span class="text-orange-500 font-bold">${order.total.toFixed(2)} DH</span>
+          <span class="text-orange-500 font-bold">${order.total.toFixed(2)} MAD</span>
         </div>
       `).join('');
     }
@@ -1486,7 +1486,7 @@
         <div class="flex items-center gap-4 p-3 bg-surface rounded-lg">
           <div class="flex-1">
             <p class="text-white font-semibold">${product.name}</p>
-            <p class="text-gray-400 text-sm">Current: ${product.price.toFixed(2)} DH</p>
+            <p class="text-gray-400 text-sm">Current: ${product.price.toFixed(2)} MAD</p>
           </div>
           <div class="flex items-center gap-2">
             <input type="number" min="0" max="100" value="${product.discount || 0}" 
