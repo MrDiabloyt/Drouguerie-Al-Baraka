@@ -1,0 +1,82 @@
+[
+  {
+    "type": "product",
+    "name": "Perceuse à percussion 850W",
+    "category": "power-tools",
+    "price": 649,
+    "stock": 12,
+    "description": "Perceuse professionnelle avec variateur de vitesse et mandrin 13 mm.",
+    "image": "",
+    "discount": 10
+  },
+  {
+    "type": "product",
+    "name": "Jeu de clés mixtes 12 pièces",
+    "category": "hand-tools",
+    "price": 189,
+    "stock": 25,
+    "description": "Jeu de clés en acier chrome vanadium, idéal pour les travaux quotidiens.",
+    "image": "",
+    "discount": 0
+  },
+  {
+    "type": "product",
+    "name": "Casque de protection chantier",
+    "category": "safety",
+    "price": 79,
+    "stock": 40,
+    "description": "Casque léger et réglable conforme aux exigences de sécurité chantier.",
+    "image": "",
+    "discount": 0
+  },
+  {
+    "type": "product",
+    "name": "Sac de ciment CPJ 35 - 50 kg",
+    "category": "materials",
+    "price": 78,
+    "stock": 100,
+    "description": "Ciment polyvalent pour maçonnerie, construction et finitions.",
+    "image": "",
+    "discount": 5
+  },
+  {
+    "type": "product",
+    "name": "Meuleuse d angle 125 mm",
+    "category": "power-tools",
+    "price": 429,
+    "stock": 9,
+    "description": "Meuleuse compacte pour découpe et ponçage avec puissance de 900W.",
+    "image": "",
+    "discount": 0
+  },
+  {
+    "type": "product",
+    "name": "Mètre ruban professionnel 5 m",
+    "category": "hand-tools",
+    "price": 49,
+    "stock": 60,
+    "description": "Mètre robuste avec crochet magnétique et graduation lisible.",
+    "image": "",
+    "discount": 0
+  },
+  {
+    "type": "product",
+    "name": "Gants de protection renforcés",
+    "category": "safety",
+    "price": 35,
+    "stock": 75,
+    "description": "Gants résistants pour protéger les mains lors des travaux intensifs.",
+    "image": "",
+    "discount": 0
+  },
+  {
+    "type": "product",
+    "name": "Brique creuse rouge",
+    "category": "materials",
+    "price": 4.5,
+    "stock": 1000,
+    "description": "Brique creuse pour cloisons et construction résidentielle.",
+    "image": "",
+    "discount": 0
+  }
+]
